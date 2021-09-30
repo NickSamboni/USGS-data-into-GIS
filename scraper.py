@@ -13,11 +13,12 @@ def scrapper():
     lon =  raw_data['longitude']
     depth = raw_data['depth']
     mag =  raw_data['mag']
-    geocode =  raw_data['place']
 
+    zone = []
     place = []
     for row in raw_data['place']:
         x=re.split(',',row)
+        zone.append(x[0])
         place.append(x[-1])
 
     final_data = pd.DataFrame(
@@ -27,8 +28,8 @@ def scrapper():
             "longitude":lon,
             "depth":depth,
             "magnitude":mag,
-            "geocode":geocode,
-            "state/country":place
+            "zone":zone,
+            "place":place
         }
     )
     print(final_data)
