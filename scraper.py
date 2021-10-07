@@ -1,6 +1,7 @@
 import pandas as pd
 import requests
 import re
+import schedule
 
 def scrapper():
     print ('Starting...')
@@ -32,7 +33,15 @@ def scrapper():
             "place":place
         }
     )
-    print(final_data)
+    final_data.to_json('index.json',orient="index")
+    final_data.to_json('table.json',orient="table")
 
 scrapper()
 
+"""
+iteration over time in order to keep fetching the data 
+schedule.every(15).minutes.do(scrapper)
+while True:
+    schedule.run_pending()
+    #time.sleep(2)
+"""
