@@ -1,6 +1,8 @@
 import pandas as pd
 import requests
 import re
+from geojson import FeatureCollection, Feature, Point
+import json
 
 def getjson():
     print ('Starting...')
@@ -32,4 +34,13 @@ def getjson():
             "place":place
         }
     )
-    final_data.to_json('datamongo.json',orient="records")
+    #final_data.to_json('datamongo.json',orient="records")
+
+    points = []
+    features = final_data.apply(lambda row: points.append( (float(row["longitude"]), float(row["latitude"]))), axis=1).tolist()
+    properties = final_data.drop(['latitude', 'longitude'], axis=1).to_dict('records')
+    feature_collection = FeatureCollection(features=features, properties=properties)
+    with open('data.geojson', 'w', encoding='utf-8') as f:
+        json.dump(feature_collection, f, ensure_ascii=False)
+
+getjson()
