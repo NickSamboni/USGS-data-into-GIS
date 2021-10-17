@@ -14,7 +14,7 @@ except:
 db = connection["USGS"]
 Collection = db["testing"]
 
-with open('datamongo.json') as file:
+with open('data.geojson') as file:
     file_data = json.load(file)
 
 if isinstance(file_data, list):
