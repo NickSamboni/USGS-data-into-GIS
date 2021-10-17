@@ -2,7 +2,7 @@ import pandas as pd
 import requests
 import re
 
-def scrapper():
+def getjson():
     print ('Starting...')
     url = 'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.csv'
     raw_data = pd.read_csv(url)
@@ -33,5 +33,3 @@ def scrapper():
         }
     )
     final_data.to_json('datamongo.json',orient="records")
-
-scrapper()
