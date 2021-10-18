@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal" created-in="PY-212.5284.44">
+    <data-source name="MongoDB - @localhost" uuid="37d2e4f6-eb01-4113-810f-10e721202d59">
+      <database-info product="Mongo DB" version="5.0.3" jdbc-version="4.2" driver-name="MongoDB JDBC Driver" driver-version="1.12" dbms="MONGO" exact-version="5.0.3" exact-driver-version="1.12" />
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <secret-storage>master_key</secret-storage>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema" qname="USGS" />
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+  </component>
+</project>

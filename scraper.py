@@ -16,8 +16,7 @@ def getjson():
     depth = raw_data['depth']
     mag =  raw_data['mag']
 
-    zone = []
-    place = []
+    zone, place = [], []
     for row in raw_data['place']:
         x=re.split(',',row)
         zone.append(x[0])
