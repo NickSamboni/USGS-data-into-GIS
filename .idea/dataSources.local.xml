@@ -7,7 +7,10 @@
       <secret-storage>master_key</secret-storage>
       <schema-mapping>
         <introspection-scope>
-          <node kind="schema" qname="USGS" />
+          <node kind="schema">
+            <name qname="USGS" />
+            <name qname="compaventa" />
+          </node>
         </introspection-scope>
       </schema-mapping>
     </data-source>

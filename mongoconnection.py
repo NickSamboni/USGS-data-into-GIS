@@ -2,7 +2,8 @@ import pymongo as mongo
 from scraper import getjson
 import json
 
-getjson()
+data = getjson()
+print(data)
 print("Function Working Properly")
 
 try:
@@ -14,12 +15,14 @@ except:
 db = connection["USGS"]
 Collection = db["testing"]
 
-with open('data.geojson') as file:
+with open('datamongo.json') as file:
     file_data = json.load(file)
 
-if isinstance(file_data, list):
-    Collection.insert_many(file_data)  
+if isinstance('', list):
+    Collection.drop()
+    Collection.insert_many(getjson())
 else:
-    Collection.insert_one(file_data)
+    Collection.drop()
+    Collection.insert_one(getjson())
 
 
