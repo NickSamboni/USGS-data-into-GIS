@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51d0722a-f213-44ba-a1ea-651633c83352" name="Changes" comment="trying to implement geojson correctly - tbd">
-      <change afterPath="$PROJECT_DIR$/main.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/37d2e4f6-eb01-4113-810f-10e721202d59.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/37d2e4f6-eb01-4113-810f-10e721202d59.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data.geojson" beforeDir="false" afterPath="$PROJECT_DIR$/data.geojson" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datamongo.json" beforeDir="false" afterPath="$PROJECT_DIR$/datamongo.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map.geojson" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/main.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mongoconnection.py" beforeDir="false" afterPath="$PROJECT_DIR$/mongoconnection.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scraper.py" beforeDir="false" afterPath="$PROJECT_DIR$/scraper.py" afterDir="false" />
     </list>
@@ -42,7 +39,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="Python.scraper">
+  <component name="RunManager" selected="Python.mongoconnection">
     <configuration name="mongoconnection" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="usgs-gis" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -89,8 +86,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.scraper" />
         <item itemvalue="Python.mongoconnection" />
+        <item itemvalue="Python.scraper" />
       </list>
     </recent_temporary>
   </component>
@@ -106,7 +103,9 @@
       <workItem from="1634506307533" duration="992000" />
       <workItem from="1634557421127" duration="189000" />
       <workItem from="1634559019884" duration="436000" />
-      <workItem from="1634572985032" duration="9576000" />
+      <workItem from="1634572985032" duration="9845000" />
+      <workItem from="1634799887668" duration="534000" />
+      <workItem from="1634801250588" duration="2869000" />
     </task>
     <task id="LOCAL-00001" summary="trying to implement geojson correctly - tbd">
       <created>1634506996358</created>
@@ -138,7 +137,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="trying to implement geojson correctly - tbd" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/usgs_gis$scraper.coverage" NAME="scraper Coverage Results" MODIFIED="1634584700075" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/usgs_gis$mongoconnection.coverage" NAME="mongoconnection Coverage Results" MODIFIED="1634582590006" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/usgs_gis$scraper.coverage" NAME="scraper Coverage Results" MODIFIED="1634803327058" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/usgs_gis$mongoconnection.coverage" NAME="mongoconnection Coverage Results" MODIFIED="1634804361281" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

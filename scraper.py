@@ -1,14 +1,10 @@
 import pandas as pd
 import re
-from geojson import FeatureCollection, Feature, Point
-import json
 
 
 def getjson():
-    print('Starting...')
     url = 'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.csv'
     raw_data = pd.read_csv(url)
-    print('url fetch correctly')
 
     time = raw_data['time']
     lat = raw_data['latitude']
@@ -34,7 +30,7 @@ def getjson():
         }
     )
 
-    geojson = {'type': 'FeatureCollection', 'features': []}
+    mongo_docs = []
     for _, row in final_data.iterrows():
         feature = {'type': 'Feature',
                    'properties': {},
@@ -43,8 +39,5 @@ def getjson():
         feature['geometry']['coordinates'] = [row['longitude'], row['latitude']]
         for prop in final_data.columns:
             feature['properties'][prop] = row[prop]
-        geojson['features'].append(feature)
-    str(geojson)
-    print(geojson[20:])
-
-getjson()
+        mongo_docs.append(feature)
+    return mongo_docs

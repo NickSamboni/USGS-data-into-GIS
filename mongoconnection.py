@@ -1,28 +1,21 @@
 import pymongo as mongo
 from scraper import getjson
-import json
 
 data = getjson()
-print(data)
 print("Function Working Properly")
 
 try:
     connection = mongo.MongoClient('mongodb://localhost:27017/')
     print("Connected successfully!!!")
-except:  
+except:
     print("Could not connect to MongoDB")
 
 db = connection["USGS"]
 Collection = db["testing"]
 
-with open('datamongo.json') as file:
-    file_data = json.load(file)
-
-if isinstance('', list):
+if isinstance(data, list):
     Collection.drop()
-    Collection.insert_many(getjson())
+    Collection.insert_many(data)
 else:
     Collection.drop()
-    Collection.insert_one(getjson())
-
-
+    Collection.insert_one(data)
